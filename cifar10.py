@@ -89,8 +89,8 @@ def run(model_path, batch_size, num_epoch, data_augmentation):
             samplewise_std_normalization=False,  # divide each input by its std
             zca_whitening=False,  # apply ZCA whitening
             rotation_range=0,  # randomly rotate images in the range (degrees, 0 to 180)
-            width_shift_range=0.1,  # randomly shift images horizontally (fraction of total width)
-            height_shift_range=0.1,  # randomly shift images vertically (fraction of total height)
+            width_shift_range=0,  # randomly shift images horizontally (fraction of total width)
+            height_shift_range=0,  # randomly shift images vertically (fraction of total height)
             horizontal_flip=True,  # randomly flip images
             vertical_flip=False)  # randomly flip images
 
@@ -104,6 +104,7 @@ def run(model_path, batch_size, num_epoch, data_augmentation):
                             samples_per_epoch=X_train.shape[0],
                             nb_epoch=num_epoch,
                             validation_data=(X_test, Y_test))
+
 
 if __name__ == '__main__':
     run()
