@@ -50,7 +50,9 @@ def preprocess(X_train, X_test):
               help='Enable data augmentation')
 def run(model_path, batch_size, num_epoch, data_augmentation):
     print('==== params ====')
-    print(model_path, batch_size, num_epoch, data_augmentation)
+    print('model_path: {}, batch_size: {}, '
+          'num_epoch: {}, data_augmentation: {}'
+          .format(model_path, batch_size, num_epoch, data_augmentation))
     print('==== ====== ====')
 
     X_train, Y_train, X_test, Y_test = load_datasets()

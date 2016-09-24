@@ -16,6 +16,12 @@ python cifar10.py <path to model>
 python cifar10.py models.ex01
 ```
 
+デフォルトで幾つかのオプションを持っています
+
+```
+python cifar10.py models.ex01 --batch_size 32 --num_epoch 10 --data_augmentation
+```
+
 ## 使い方
 
 ### モデルの追加
